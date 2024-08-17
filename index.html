@@ -12,13 +12,15 @@
         <div class="container">
             <nav>
                 <img src="images/name1.png" class="logo">
-                <ul>
+                <ul id="side-menu">
                     <li><a href="">Home</a></li>
                     <li><a href="">About</a></li>
                     <li><a href="">Services</a></li>
                     <li><a href="">Portfolio</a></li>
                     <li><a href="">Contact</a></li>
+                    <i class="fas fa-times" onclick="closeMenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openMenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Full stack developer</p>
@@ -194,6 +196,15 @@
 
 </script>
 
+<script>
+    var sidemenu=document.getElementById("side-menu")
+    function openMenu(){
+        sidemenu.style.right="0"
+    }
+    function closeMenu(){
+        sidemenu.style.right="-200px"
+    }
+</script>
 
 </body>
 </html>
