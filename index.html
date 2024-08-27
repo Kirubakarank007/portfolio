@@ -125,7 +125,7 @@
                 </div>
             </div>
             <div class="work">
-                <img src="images/orgo.png">
+                <img src="images/orgo1.png">
                 <div class="layer">
                     <h3>Orgo products web </h3>
                     <p>The development of an e-commerce platform tailored for organic farmers to sell their products.</p>
@@ -144,9 +144,35 @@
                     </a>
                 </div>
             </div>
+            
         </div>
-        <a href="" class="btn">See more</a>
+        <div class="work-list1" id="work-list1">
+            <div class="work">
+                <img src="images/Customer_setup.png">
+                <div class="layer" >
+                    <h3>Feature</h3>
+                    <p>Create the features for Peazy app during internship.using maptiler to load map</p>
+                    <a href="https://github.com/Kirubakarank007/customer-setup-frontend">
+                        <i class="fas fa-external-link-alt" ></i>
+                    </a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/login.png">
+                <div class="layer" >
+                    <h3>Can_I_Serve App</h3>
+                    <p>This catering service provider app has two separate logins for job seekers and job providers. Job seekers can browse available catering jobs and apply, while job providers can post job openings and manage applications </p>
+                    <a href="https://github.com/Kirubakarank007/Can_I_Serve">
+                        <i class="fas fa-external-link-alt" ></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </div>
+
+    <a href="#portfolio" class="btn" id="seeMoreBtn" onclick="hideButton()">See more</a>
+    
 </div>
 
 <!-- contect -->
@@ -170,7 +196,7 @@
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message"rows=6 placeholder="Your Message"  id=""></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
+                    <button type="submit" class="btn btn2" >Submit</button>
                 </form>
                 <span id="msg"></span>
             </div>
@@ -213,6 +239,7 @@
   
     form.addEventListener('submit', e => {
       e.preventDefault()
+      msg.innerHTML="Sending . . ."
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response =>{
             msg.innerHTML="Message Sent successfully"
@@ -223,6 +250,16 @@
         })
         .catch(error => console.error('Error!', error.message))
     })
+  </script>
+
+  <script>
+    function hideButton() {
+    var button = document.getElementById("seeMoreBtn");
+    var workList=document.getElementById("work-list1")
+    button.style.display = "none";
+    workList.style.display="grid"
+
+    }
   </script>
 
 </body>
